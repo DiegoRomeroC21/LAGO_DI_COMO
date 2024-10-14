@@ -1,0 +1,430 @@
+
+
+body {
+background-color: #f6f6f6;
+
+}
+nav {
+position: fixed;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding-top: 32px;
+padding-left: 3%;
+padding-right: 3%;
+z-index: 2;
+transition: opacity 0.5s ease-out; /* Suave transición para la opacidad */
+}
+
+h1.menu {
+display: none;
+}
+ul{
+    margin-left: 23px;/*para cambiar la posición del menu de navegación*/
+}
+.list{
+    margin-left: 605px;/*para cambiar la posición del menu de navegación*/
+}
+
+ul li {
+display: inline-block;
+padding: 0px 20px;
+margin-left: 5px;
+
+}
+@media (max-width: 930px){
+    nav {flex: content;
+    position: fixed;}
+    .lista {
+        display: none;
+    }
+    .inicio h3{display: none;}
+}
+a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+ul li :hover {
+    color: #ffcb74 ;
+    text-decoration: none;
+    font-weight: bold;
+    
+    }
+
+img {
+width: 90px;
+height: 95px;
+margin-left: -15px;
+}
+
+.inicio center p{
+position: relative;
+top: 225px;
+color: white;
+font-size: 16px;
+}
+.inicio h3{
+    position: relative;
+    top: 215px;
+    color: white;
+    font-size: 32px;
+    font-weight: lighter ;
+}
+
+.inicio {
+    display: inline-block;
+background-color: #2f2f2fd6;
+background-blend-mode: overlay;
+    background-image: url('images/fondoLago.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100vw ; 
+    height: 110vh; 
+    overflow-x: hidden;
+    margin: -25px;
+min-height: 672px;
+}
+.reserve {
+position: relative;
+top: 15px;
+background: #fde4c32d;
+padding: 10px;
+width: 270px;
+height: 60px;
+font-size: 22px;
+font-weight:lighter;
+font-family: 'Times New Roman', Times, serif;
+border: none;
+border-radius: 5px;
+}
+
+.reserve:hover {
+    background: rgba(141, 117, 87, 0.205); /* Color de fondo al hacer hover */
+    transform: scale(1.05); /* Efecto de escalado al hacer hover */
+}
+.reserve a{
+    color: aliceblue;
+}
+
+.historia{
+    position: relative;
+    background:#33160E;
+    width: 100vw;
+    height: 70vh;
+    padding-top: 10%;
+    padding-bottom: 8%;
+margin: -25px;
+margin-top: -30vh;
+z-index: 4;
+box-shadow: 0px -10px 40px #000000;
+height: 100vmin;
+}
+.historia .subtitulo{
+font-size: 19px;
+font-weight: lighter ;
+color: #ffcb74;
+}
+
+.historia .parrafoVistoso{
+font-size: 15px;
+color: #f6f6f6;
+}
+
+.historia .info{
+    font-size: 13px;
+    text-align: center;
+color: #fde4c3;
+margin: 5%;
+}
+
+ 
+.fondo {
+    width: 100vw;
+    margin: -25px;
+z-index: 3;
+}
+
+.titulo{
+    background-color: #33160E;
+padding: 7%;
+border-radius: 10px;
+    display:inline-block;
+position: relative;
+    font-size: 5vmin;
+    color: #fde4c3;
+    text-shadow: 0px -2px 10px #000000;
+    font-weight: lighter;
+    z-index: 5;
+margin-top: 10%;
+    }
+.contenido {
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.contenido ol {
+background-color: #53340b;
+border-radius: 19px;
+list-style: upper-roman;
+list-style-position: inside;
+color: aliceblue;
+padding-top: 4%;
+padding-left: 2%;
+padding-right: 2%;
+padding-bottom: 2%;
+margin: 7%;
+
+}
+
+.contenido li {
+    font-size: 2.2vw;
+    margin-bottom: 30px; /* Espacio entre los elementos de la lista */
+font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.contenido img {
+ position: relative;
+    display: block;
+    margin-top: 10px; /* Espacio entre el texto y la imagen */
+    max-width: 100%; /* Asegura que la imagen no sobresalga del contenedor */
+    height: 50vh; /* Mantiene la proporción de la imagen */
+width: 80%;
+border-radius: 17px;
+object-fit: cover;
+object-position: center;
+}
+
+.testimonios-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    margin-bottom: 130px;
+    margin-top: -20px;
+}
+
+.testimonio-box {
+    background-color: #ffcb74;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.4s ease-in-out, background-image 0.4s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.testimonio-box:hover {
+    transform: scale(1.05);
+    color: #fde4c3;
+}
+.testimonio-box:hover p,
+.testimonio-box:hover h4 {
+    color: #fde4c3;
+}
+
+/* Imágenes específicas para cada caja en el hover */
+.testimonio-box:nth-child(1):hover {
+    background-image: url('images/fondo_testimonios.jpg');
+    background-color: #2f2f2fd6;
+    background-blend-mode: overlay;
+}
+
+.testimonio-box:nth-child(2):hover {
+    background-image: url('images/fondo_testimonios2.jpg');
+    background-color: #2f2f2fd6;
+    background-blend-mode: overlay;
+}
+
+.testimonio-box:nth-child(3):hover {
+    background-image: url('images/fondo_testimonios3.jpg');
+    background-color: #2f2f2fd6;
+    background-blend-mode: overlay;
+}
+
+.testimonio-box:nth-child(4):hover {
+    background-image: url('images/fondo_testimonios4.jpg');
+    background-color: #2f2f2fd6;
+    background-blend-mode: overlay;
+}
+
+.testimonio-box p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.testimonio-box h4 {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #46332e;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px;
+}
+
+.comparison-table th, .comparison-table td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 12px;
+}
+
+.comparison-table th {
+    background-color: #46332e;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.comparison-table td {
+    color: #333333;
+}
+
+.comparison-table tr:nth-child(even) {
+    background-color: #ffcb74;
+}
+
+.comparison-table tr:nth-child(odd) {
+    background-color: #fde4c3;
+}
+
+.comparison-table a {
+    color: #46332e;
+    text-decoration: none;
+}
+
+.comparison-table a:hover {
+    color: #46332e;
+    text-decoration: underline;
+}
+
+.video-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ajuste para alinear los videos */
+    gap: 5px;
+    max-width: 100%;
+    margin: 5px 10px;
+    padding: 20px 40px; /* Simplificado con padding */
+    margin-top: -40px;
+   
+}
+
+.video-box {
+    flex: 1;
+    max-width: 100%; /* Ajusta el ancho según sea necesario */
+    border: 2px solid #46332e00;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #46332e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.523);
+}
+
+.video-box h3 {
+    text-align: center;
+    color: #ffcb74;
+    margin: 10px 0;
+}
+
+.video-box video {
+    width: 100%;
+    height: 60vmin; /* Ajusta la altura según sea necesario */
+    border: none;
+    border-radius: 8px; /* Añade bordes redondeados al video */
+    object-fit: cover; /* Para ajustar la imagen del video en el contenedor */
+}
+
+
+footer {
+    font-size: 2.5vh;
+    position: relative;
+    justify-content: center;
+    background-color: #46332e; /* Fondo oscuro para coincidir con el tema */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    margin: -65px;
+    width: 100vw;
+padding-right: -20%;
+}
+
+footer a {
+    color: #ffcb74; /* Color del enlace que coincide con el tema */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #fde4c3; /* Color al hacer hover en el enlace */
+    text-decoration: underline;
+}
+
+.reservation-form {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.623);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    margin-bottom: 200px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-right: 40px;
+}
+
+.reservation-form h2 {
+    text-align: center;
+    color: #fde4c3;
+    margin-bottom: 20px;
+}
+
+.reservation-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #fde4c3;
+    font-weight: bold;
+}
+
+.reservation-form input, .reservation-form select, .reservation-form textarea {
+    background-color: #2f2f2fb5;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd73;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.reservation-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #46332e;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reservation-form button:hover {
+    background-color: #2f2f2f;
+}
+

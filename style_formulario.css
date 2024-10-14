@@ -1,0 +1,8 @@
+@media (max-width: 1000px){
+    nav {flex: content;
+    position: fixed;
+display: none;}
+    .lista {
+        display: none;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - LAGO DI COMO</title>
+
+    <link rel="stylesheet" href="styles.css" media="(min-width: 769px)">
+        
+    <link rel="stylesheet" href="styles_mobile.css" media="(max-width: 768px)">
+    <link rel="stylesheet" href="style_formulario.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<header>
+<nav>
+<img src="images\logo.png" alt="LOGO">
+<h1 class="menu">LAGO DI COMO</h1>
+<!--logo generado por Inteligencia artificial inspirado en la monalisa de Italia-->
+<ul class="list">
+<li><a href="index.html">INICIO</a></li>
+<li><a href="#pieDePagina">REFERENCIAS</a></li>
+</ul>
+</header>
+<div class="inicio" id="fondoInicio">
+</nav>
+<center>
+<form class="reservation-form">
+    <h2>Reservación de Viaje Todo Incluido a Lago di Como</h2>
+
+    <label for="full-name">Nombre Completo:</label>
+    <input type="text" id="full-name" name="full-name" required>
+
+    <label for="email">Correo Electrónico:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Teléfono:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="travel-date">Fecha de Viaje:</label>
+    <input type="date" id="travel-date" name="travel-date" required>
+
+    <label for="num-guests">Número de Personas:</label>
+    <input type="number" id="num-guests" name="num-guests" min="1" max="10" required>
+
+    <label for="room-type">Tipo de Habitación:</label>
+    <select id="room-type" name="room-type" required>
+        <option value="standard">Estándar</option>
+        <option value="suite">Suite</option>
+        <option value="deluxe">Deluxe</option>
+    </select>
+
+    <label for="special-requests">Solicitudes Especiales:</label>
+    <textarea id="special-requests" name="special-requests" rows="4" placeholder="Escribe tus solicitudes aquí..."></textarea>
+
+    <button type="submit">Reservar Ahora</button>
+</form>
+</center>
+</div>
+<footer id="pieDePagina">
+    <p>Autor: Diego Armando Romero Castillo</p>
+    <p>Contacto: <a href="mailto:diegoromero.ac@gmail.com">diegoromero.ac@gmail.com</a></p>
+    <p>Italia.it. (n.d.). Lago de Como: Naturaleza y encanto. Italia. Recuperado el 31 de agosto de 2024, de <br>
+        <a href="https://www.italia.it/es/lombardia/lago-de-como-naturaleza-y-encanto">https://www.italia.it/es/lombardia/lago-de-como-naturaleza-y-encanto</a></p>
+</footer>
