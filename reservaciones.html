@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - LAGO DI COMO</title>
+    <link rel="stylesheet" href="styles.css" media="(min-width: 769px)">
+    <link rel="stylesheet" href="styles_mobile.css" media="(max-width: 768px)">
+    <link rel="stylesheet" href="style_formulario.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="images/logo.png" alt="LOGO">
+            <h1 class="menu">LAGO DI COMO</h1>
+            <ul class="list">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="#pieDePagina">REFERENCIAS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="inicio" id="fondoInicio">
+        <center>
+            <div id="search-component"></div> <!-- Contenedor para React -->
+        </center>
+    </div>
+    <footer id="pieDePagina">
+        <p>Autor: Diego Armando Romero Castillo</p>
+        <p>Contacto: <a href="mailto:diegoromero.ac@gmail.com">diegoromero.ac@gmail.com</a></p>
+        <p>Italia.it. (n.d.). Lago de Como: Naturaleza y encanto. Italia. Recuperado el 31 de agosto de 2024, de <br>
+            <a href="https://www.italia.it/es/lombardia/lago-de-como-naturaleza-y-encanto">https://www.italia.it/es/lombardia/lago-de-como-naturaleza-y-encanto</a></p>
+    </footer>
+
+    <!-- React y ReactDOM desde CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Componente de React -->
+    <script type="text/babel">
+        function SearchComponent() {
+            const [location, setLocation] = React.useState('Lago di Como');
+            const [date, setDate] = React.useState('');
+            const [results, setResults] = React.useState([]);
+
+            const handleSearch = () => {
+                // Simulación de resultados de búsqueda
+                const mockData = [
+                    { id: 1, name: 'Hotel Bellagio', type: 'Hotel', description: 'Un hotel de lujo con vista al lago.', price: '$200/noche' },
+                    { id: 2, name: 'Tour en Barco', type: 'Tour', description: 'Disfruta de un paseo en barco por el lago.', price: '$50/persona' },
+                    { id: 3, name: 'Ristorante La Pergola', type: 'Restaurante', description: 'Comida italiana tradicional.', price: '$30/persona' },
+                ];
+
+                setResults(mockData);
+            };
+
+            return (
+                <div className="reservation-form">
+                    <h2>Busca servicios turísticos en Lago di Como</h2>
+
+                    <label htmlFor="location">Ubicación:</label>
+                    <input
+                        type="text"
+                        id="location"
+                        value={location}
+                        onChange={(e) => setLocation(e.target.value)}
+                    />
+
+                    <label htmlFor="date">Fecha:</label>
+                    <input
+                        type="date"
+                        id="date"
+                        value={date}
+                        onChange={(e) => setDate(e.target.value)}
+                    />
+
+                    <button onClick={handleSearch}>Buscar</button>
+
+                    <div className="search-results">
+                        {results.map((service) => (
+                            <div key={service.id} className="service-item">
+                                <h3>{service.name}</h3>
+                                <p>{service.description}</p>
+                                <p><strong>Tipo:</strong> {service.type}</p>
+                                <p><strong>Precio:</strong> {service.price}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            );
+        }
+
+        // Renderiza el componente en el contenedor
+        ReactDOM.render(<SearchComponent />, document.getElementById('search-component'));
+    </script>
+</body>
+</html>
