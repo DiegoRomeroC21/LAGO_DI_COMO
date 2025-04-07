@@ -1,0 +1,99 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/faro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover cover;
+    background-position: center;
+    color: #fff; /* Texto en blanco para contraste */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el navbar */
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar-logo {
+    font-size: 2px;
+    color: #fde4c3;
+    text-decoration: none;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-links li {
+    margin-left: 20px;
+}
+
+.navbar-links a {
+    color: #fde4c3;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.navbar-links a:hover {
+    color: #ffcb74 ;
+    text-decoration: none;
+}
+
+/* Estilo del formulario de inicio de sesión */
+.login-container {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el formulario */
+    padding: 30px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    margin: 100px auto 0; /* Centrado en la página */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #fde4c3;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 19px;
+    color: #333;
+}
+
+button {
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    padding: 12px;
+    background-color: #46332e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2f2f2f;
+}
+
+img {
+    width: 90px;
+    height: 95px;
+    margin-left: 5px;
+    }
