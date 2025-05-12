@@ -6,3 +6,24 @@ display: none;}
         display: none;
     }
 }
+
+/* Evitar borde rojo inicial */
+input:invalid:not(:focus):not(:placeholder-shown),
+select:invalid:not(:focus),
+textarea:invalid:not(:focus) {
+    border-color: initial; /* Mantener el borde predeterminado */
+}
+
+/* Mostrar borde rojo solo después de interacción */
+input:invalid:focus,
+select:invalid:focus,
+textarea:invalid:focus {
+    border-color: red;
+}
+
+/* Mensajes de error */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
